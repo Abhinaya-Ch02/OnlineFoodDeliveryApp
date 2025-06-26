@@ -20,7 +20,7 @@ The system is powered by **Java Servlets**, uses **MySQL** as the database, and 
 
 ---
 
-<h3>🏠 Home Page (`index.html`)</h3>
+### 🏠 Home Page (`index.html`)
 <div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
   <img src="screenshots/homepage.png" alt="Home Page" width="60%">
 </div>
@@ -28,43 +28,57 @@ The system is powered by **Java Servlets**, uses **MySQL** as the database, and 
 📝 <strong>Description:</strong>  
 ➡️ A clean welcome screen featuring the app’s name and a <strong>"Get Started"</strong> button. It leads users to log in or register and start their food journey.
 
-
+---
 ### 🔐 Login Page (`login.html`)
-![Login Page](screenshots/login.png)  
-➡️ Secure login form with friendly UI and redirection to signup for new users.
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/login.png" alt="Login Page" width="60%">
+</div>
+
+📝 <strong>Description:</strong>  
+➡️Secure login form with a clean UI. If the user doesn’t have an account, they are redirected to the sign-up page.
 
 ---
 
 ### 📝 Sign-Up Page (`signup.html`)
-![Sign-Up Page](screenshots/signup.png)  
-➡️ Allows new users to register by providing username, email, and password.
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/signup.png" alt="Sign-Up Page" width="60%">
+</div>
+
+📝 <strong>Description:</strong>  
+➡️New users can register by providing a username, email, and password. Data is stored in the `users` table.
 
 ---
 
 ### 🍱 Menu Page (`home1.jsp`)
-![Menu Page](screenshots/food_items.png)  
-➡️ Displays a list of food items from the database with **Add to Cart** functionality.
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/food_items.png" alt="Menu Page" width="60%">
+</div>
+
+📝 <strong>Description:</strong>  
+➡️Displays food items retrieved from the `food_items` table in the database, each with an image, name, price, and an **Add to Cart** button.
 
 ---
 
 ### 🛒 Cart Page (`mycart.jsp`)
-![Cart Page](screenshots/cart.png)  
-➡️ View selected items, total price, and proceed to **Place Order**.
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/cart.png" alt="Cart Page" width="60%">
+</div>
+
+📝 <strong>Description:</strong>  
+➡️Shows the selected items in the cart, calculates the total price, and provides a **Place Order** button to confirm the order.
 
 ---
 
 ### ✅ Order Confirmation
-![Confirmation Page](screenshots/order_confirmation.png)  
-➡️ Displays confirmation message and stores order in the database.
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/order_confirmation.png" alt="Order Confirmation Page" width="60%">
+</div>
+
+📝 <strong>Description:</strong>  
+➡️Displays a confirmation message once the order is placed. Order details are stored in the `orders` table, and users can continue shopping or log out.
+
 
 ---
-
-### 🔓 Logout Flow
-![Logout Page](screenshots/logout.png)  
-➡️ Ends the user session and redirects to the homepage with a logout success message.
-
----
-
 ## ⚙️ Tech Stack
 
 | Layer       | Technology              |
