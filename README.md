@@ -86,67 +86,90 @@ Once logged out, the session ends and the user is redirected to the homepage wit
 
 ## 🗂️ Project Structure
 
+```
 OnlineFoodDeliveryApp/
-├── nbproject/ # NetBeans config
-├── src/ # Java servlets
-├── web/ # JSP, HTML, images
-├── screenshots/ # App UI screenshots
+├── nbproject/           # NetBeans config
+├── src/                 # Java servlets
+│   ├── SignupServlet.java
+│   ├── LoginServlet.java
+│   ├── HomeServlet.java
+│   ├── AddToCartServlet.java
+│   └── CartServlet.java
+├── web/                 # JSP, HTML, images
+│   ├── images/
+│   ├── META-INF/
+│   ├── WEB-INF/
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── home1.jsp
+│   ├── mycart.jsp
+│   └── OrderConfirmation.jsp
+├── screenshots/         # App screenshots for README display
 ├── .gitignore
 └── README.md
+```
 
 ---
 
 ## 🚀 How to Run the Project
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/YourUsername/OnlineFoodDeliveryApp.git
-cd OnlineFoodDeliveryApp
-Open the project in NetBeans
+   ```bash
+   git clone https://github.com/YourUsername/OnlineFoodDeliveryApp.git
+   cd OnlineFoodDeliveryApp
+   ```
 
-Set up the MySQL database
+2. **Open the project in NetBeans**
 
-Create a DB named food_delivery
+3. **Set up the MySQL database**
+   - Create a database:
+     ```sql
+     CREATE DATABASE food_delivery;
+     ```
+   - Create tables: `users`, `food_items`, `cart`, `orders`
 
-Add tables: users, food_items, cart, orders
+4. **Configure JDBC (in servlet files)**
+   - Example:
+     ```java
+     Connection conn = DriverManager.getConnection(
+         "jdbc:mysql://localhost:3306/food_delivery", "root", "your-password"
+     );
+     ```
 
-Run the project
+5. **Build and Deploy**
+   - Right-click the project → Clean and Build
+   - Then Run → deploys to Apache Tomcat
 
-Deploy it to Apache Tomcat
+6. **Access the App**
+   - Open your browser and go to:
+     ```
+     http://localhost:8080/OnlineFoodDeliveryApp
+     ```
 
-Visit: http://localhost:8080/OnlineFoodDeliveryApp
+---
 
-🧪 User Flow
-🏠 Welcome screen → click Get Started
+## 🧪 User Flow
 
-🔐 Log in or 📝 Sign up
+- 🏠 Welcome screen → click **Get Started**
+- 🔐 Log in or 📝 Sign up
+- 🍽️ Browse food menu
+- ➕ Add items to cart
+- 🛍️ View cart & place order
+- ✅ Receive order confirmation
+- 🔓 Logout when done
 
-🍽️ Browse food menu
+---
 
-➕ Add items to cart
+## 🙋 Author(s)
 
-🛍️ View cart & place order
-
-✅ Receive order confirmation
-
-🔓 Logout when done
-
-🙋 Authors
-👩‍💻 Abhinaya Chalamalasetti
+- 👩‍💻 **Abhinaya Chalamalasetti**  
 
 
-📜 License
-This project is made for academic demonstration under VR Siddhartha Engineering College. Not for commercial use.
 
-✨ Feedback & Contributions
-If you like this project or want to contribute, feel free to fork, ⭐ star, or submit a pull request.
+---
+
+## ✨ Feedback & Contributions
+
+If you like this project or want to contribute, feel free to **fork**, ⭐ **star**, or submit a **pull request**.  
 Let’s make food ordering smarter together 🍽️💻
-
-
-
-
-
-
-
-
-
