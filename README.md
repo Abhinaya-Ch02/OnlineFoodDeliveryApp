@@ -131,7 +131,7 @@ OnlineFoodDeliveryApp/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YourUsername/OnlineFoodDeliveryApp.git
+   git clone https://github.com/Abhinaya-Ch02/OnlineFoodDeliveryApp.git
    cd OnlineFoodDeliveryApp
    ```
 
