@@ -1,86 +1,78 @@
 # 🍕 Online Food Delivery Management System
 
-> A full-stack **Java Web Application** that allows users to explore menus, order food online, and manage their cart — all in one place! Built with JSP, Servlets, and MySQL.
+> A full-stack **Java Web Application** for seamless food ordering, built using **JSP**, **Servlets**, and **MySQL**.  
+> Users can browse menus, manage carts, and place orders — all through a smooth, responsive interface.
 
 ---
 
-## 📌 Project Overview
+## 📖 Overview
 
-This project helps users:
+This web-based food ordering system allows users to:
 
-- 👤 Create an account  
-- 🔐 Log in securely  
-- 🍔 Browse food items  
+- 👤 Register and log in securely  
+- 🍽️ Browse available food items  
 - 🛒 Add items to cart  
-- ✅ Place orders  
-- 🧾 View order confirmation  
+- 📦 Place orders  
+- ✅ Receive instant confirmation  
+- 🔓 Log out when done
 
-All actions are backed by **Java Servlets** and stored in a **MySQL** database.
+The system is powered by **Java Servlets**, uses **MySQL** as the database, and runs on **Apache Tomcat**.
 
 ---
 
-## 🖼️ Screenshots & Walkthrough
-
-Here's a visual journey through the app:
+## 🖼️ Screenshots & UI Walkthrough
 
 ### 🏠 Home Page (`index.html`)
 ![Home Page](screenshots/homepage.png)  
-📝 **Description:**  
-A clean welcome screen featuring the app’s name and a **Get Started** button. It leads users to log in or register and start their food journey!
+➡️ Welcome screen with a **"Get Started"** button that guides users to log in or register.
 
 ---
 
 ### 🔐 Login Page (`login.html`)
 ![Login Page](screenshots/login.png)  
-📝 **Description:**  
-Existing users log in here with username and password. The page includes a link to sign up for new users.
+➡️ Secure login form with friendly UI and redirection to signup for new users.
 
 ---
 
 ### 📝 Sign-Up Page (`signup.html`)
-![Signup Page](screenshots/signup.png)  
-📝 **Description:**  
-New users can register with a username, email, and password. Their details are stored in the `users` table of the MySQL database.
+![Sign-Up Page](screenshots/signup.png)  
+➡️ Allows new users to register by providing username, email, and password.
 
 ---
 
-### 🍱 Food Items Page (`home1.jsp`)
-![Food Items](screenshots/food_items.png)  
-📝 **Description:**  
-Once logged in, users can see a delicious menu pulled from the `food_items` table. Each item has an image, name, price, and **Add to Cart** button.
+### 🍱 Menu Page (`home1.jsp`)
+![Menu Page](screenshots/food_items.png)  
+➡️ Displays a list of food items from the database with **Add to Cart** functionality.
 
 ---
 
-### 🛒 My Cart Page (`mycart.jsp`)
+### 🛒 Cart Page (`mycart.jsp`)
 ![Cart Page](screenshots/cart.png)  
-📝 **Description:**  
-View all added items, remove items, and check total price. A **Place Order** button at the bottom finalizes the purchase.
+➡️ View selected items, total price, and proceed to **Place Order**.
 
 ---
 
-### ✅ Order Confirmation Page
-![Order Confirmation](screenshots/order_confirmation.png)  
-📝 **Description:**  
-A friendly message confirming the order. All order data is saved in the `orders` table. Users can return to shopping or log out.
+### ✅ Order Confirmation
+![Confirmation Page](screenshots/order_confirmation.png)  
+➡️ Displays confirmation message and stores order in the database.
 
 ---
 
-### 🔓 Logout Page
-![Logout](screenshots/logout.png)  
-📝 **Description:**  
-Once logged out, the session ends and the user is redirected to the homepage with a success alert: **"Logout Successful!"**
+### 🔓 Logout Flow
+![Logout Page](screenshots/logout.png)  
+➡️ Ends the user session and redirects to the homepage with a logout success message.
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Layer        | Technology               |
-|--------------|---------------------------|
-| 👩‍🎨 Frontend   | HTML, CSS, JSP            |
-| 🧠 Backend    | Java Servlets (Jakarta)  |
-| 🗃️ Database    | MySQL                     |
-| 🔥 Server     | Apache Tomcat             |
-| 💻 IDE        | NetBeans                  |
+| Layer       | Technology              |
+|-------------|--------------------------|
+| 🎨 Frontend  | HTML, CSS, JSP           |
+| 🧠 Backend   | Java Servlets (Jakarta)  |
+| 🗃️ Database  | MySQL                    |
+| 🔥 Server    | Apache Tomcat            |
+| 💻 IDE       | NetBeans                 |
 
 ---
 
@@ -88,24 +80,22 @@ Once logged out, the session ends and the user is redirected to the homepage wit
 
 ```
 OnlineFoodDeliveryApp/
-├── nbproject/           # NetBeans config
-├── src/                 # Java servlets
+├── nbproject/           # NetBeans configuration
+├── src/                 # Java Servlets
 │   ├── SignupServlet.java
 │   ├── LoginServlet.java
 │   ├── HomeServlet.java
 │   ├── AddToCartServlet.java
 │   └── CartServlet.java
-├── web/                 # JSP, HTML, images
+├── web/                 # HTML, JSP, and static assets
 │   ├── images/
-│   ├── META-INF/
-│   ├── WEB-INF/
 │   ├── index.html
 │   ├── login.html
 │   ├── signup.html
 │   ├── home1.jsp
 │   ├── mycart.jsp
 │   └── OrderConfirmation.jsp
-├── screenshots/         # App screenshots for README display
+├── screenshots/         # UI screenshots for README
 ├── .gitignore
 └── README.md
 ```
@@ -113,6 +103,16 @@ OnlineFoodDeliveryApp/
 ---
 
 ## 🚀 How to Run the Project
+
+### 📦 Prerequisites
+
+- Java JDK 11 or higher  
+- Apache Tomcat 9+  
+- MySQL Server  
+- NetBeans IDE (with Java EE support)  
+- Git (optional)
+
+### 🛠️ Setup Instructions
 
 1. **Clone the repository**
    ```bash
@@ -122,54 +122,57 @@ OnlineFoodDeliveryApp/
 
 2. **Open the project in NetBeans**
 
-3. **Set up the MySQL database**
-   - Create a database:
+3. **Configure MySQL Database**
+   - Create the database:
      ```sql
      CREATE DATABASE food_delivery;
      ```
    - Create tables: `users`, `food_items`, `cart`, `orders`
 
-4. **Configure JDBC (in servlet files)**
-   - Example:
-     ```java
-     Connection conn = DriverManager.getConnection(
-         "jdbc:mysql://localhost:3306/food_delivery", "root", "your-password"
-     );
-     ```
+4. **Check database connection in Servlets**
+   ```java
+   Connection conn = DriverManager.getConnection(
+       "jdbc:mysql://localhost:3306/food_delivery", "root", "your-password"
+   );
+   ```
 
 5. **Build and Deploy**
-   - Right-click the project → Clean and Build
-   - Then Run → deploys to Apache Tomcat
+   - Right-click the project → `Clean and Build`
+   - Right-click again → `Run` (deploys to Tomcat)
 
-6. **Access the App**
-   - Open your browser and go to:
-     ```
-     http://localhost:8080/OnlineFoodDeliveryApp
-     ```
+6. **Visit the application**
+   ```
+   http://localhost:8080/OnlineFoodDeliveryApp
+   ```
 
 ---
 
-## 🧪 User Flow
+## 🧪 User Journey
 
-- 🏠 Welcome screen → click **Get Started**
-- 🔐 Log in or 📝 Sign up
-- 🍽️ Browse food menu
-- ➕ Add items to cart
-- 🛍️ View cart & place order
-- ✅ Receive order confirmation
-- 🔓 Logout when done
+- 🏠 Launch welcome page  
+- 🔐 Login or 📝 Register  
+- 🍽️ Browse food menu  
+- ➕ Add items to cart  
+- 🛍️ Review and place order  
+- ✅ Get confirmation  
+- 🔓 Logout securely
 
 ---
 
 ## 🙋 Author(s)
 
-- 👩‍💻 **Abhinaya Chalamalasetti**  
-
+- 👩‍💻 **Abhinaya Chalamalasetti**
 
 
 ---
 
+
 ## ✨ Feedback & Contributions
 
-If you like this project or want to contribute, feel free to **fork**, ⭐ **star**, or submit a **pull request**.  
-Let’s make food ordering smarter together 🍽️💻
+If you found this project helpful or want to enhance it:
+
+- ⭐ Star the repository  
+- 🍴 Fork and contribute  
+- 🛠️ Submit a pull request  
+
+Let’s make food ordering smarter together! 🍽️💻
