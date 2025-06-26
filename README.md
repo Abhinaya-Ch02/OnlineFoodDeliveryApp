@@ -20,13 +20,14 @@ The system is powered by **Java Servlets**, uses **MySQL** as the database, and 
 
 ---
 
-## 🖼️ Screenshots & UI Walkthrough
+<h3>🏠 Home Page (`index.html`)</h3>
+<div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
+  <img src="screenshots/homepage.png" alt="Home Page" width="60%">
+</div>
 
-### 🏠 Home Page (`index.html`)
-![Home Page](screenshots/homepage.png)  
-➡️ Welcome screen with a **"Get Started"** button that guides users to log in or register.
+📝 <strong>Description:</strong>  
+➡️ A clean welcome screen featuring the app’s name and a <strong>"Get Started"</strong> button. It leads users to log in or register and start their food journey.
 
----
 
 ### 🔐 Login Page (`login.html`)
 ![Login Page](screenshots/login.png)  
