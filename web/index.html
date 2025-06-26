@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Food Delivery</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Lato', sans-serif;
+            overflow: hidden;
+            background-color: #f8f9fa; /* Light background for the page */
+        }
+
+        /* Background Image */
+        .welcome-page {
+            background-image: url('images/back.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Bigger Rectangular Overlay */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+            padding: 60px; /* Increased padding for a bigger feel */
+            border-radius: 30px; /* Slightly rounded corners */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            backdrop-filter: blur(10px); /* Blur effect for a frosted glass look */
+            color: #333;
+            max-width: 800px; /* Increased max-width for a bigger overlay */
+            width: 90%;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .overlay:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* Welcome Message */
+        h1 {
+            font-size: 3.5rem; /* Larger font size for the heading */
+            margin: 0 0 20px 0; /* Added margin for spacing */
+            font-weight: bold;
+            color: #2c3e50; /* Dark blue-gray for a modern look */
+            font-family: 'Roboto', sans-serif; /* Bold and modern font */
+        }
+
+        p {
+            font-size: 1.5rem; /* Larger font size for the tagline */
+            margin: 0 0 30px 0; /* Added margin for spacing */
+            color: #555;
+            font-family: 'Lato', sans-serif; /* Clean and friendly font */
+            line-height: 1.6;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #3498db; /* Soft blue for the button */
+            color: white;
+            padding: 15px 40px; /* Larger padding for a bigger button */
+            font-size: 1.2rem; /* Larger font size for the button */
+            border: none;
+            border-radius: 8px; /* Slightly rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Lato', sans-serif; /* Consistent font for button */
+        }
+
+        .btn:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+            transform: translateY(-3px); /* Slight lift on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-page">
+        <div class="overlay">
+            <h1>Welcome to Food Delivery</h1>
+            <p>Order your favorite food from the best restaurants in town.</p>
+            <a href="login.html" class="btn">Get Started</a>
+        </div>
+    </div>
+</body>
+</html>

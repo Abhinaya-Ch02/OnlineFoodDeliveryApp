@@ -1,0 +1,19 @@
+# NetBeans private project settings
+nbproject/private/
+
+# Build output folders
+build/
+dist/
+
+# Java compiled class files
+*.class
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Database files (optional)
+*.db
