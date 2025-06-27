@@ -71,7 +71,7 @@ The system is powered by **Java Servlets**, uses **MySQL** as the database, and 
 
 ### ✅ Order Confirmation
 <div align="center" style="border: 1px solid #ccc; padding: 8px; display: inline-block;">
-  <img src="screenshots/order_confirmation.png" alt="Order Confirmation Page" width="60%">
+  <img src="screenshots/order_confirmation.png?v=2" alt="Order Confirmation Page" width="60%">
 </div>
 
 📝 <strong>Description:</strong>  
