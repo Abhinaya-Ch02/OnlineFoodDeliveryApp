@@ -1,4 +1,4 @@
-# 🍕 Online Food Delivery Management System
+# 🍕🧑‍🍳 Online Food Delivery Management System
 
 > A full-stack **Java Web Application** for seamless food ordering, built using **JSP**, **Servlets**, and **MySQL**.  
 > Users can browse menus, manage carts, and place orders — all through a smooth, responsive interface.
